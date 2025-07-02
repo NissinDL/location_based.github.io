@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>GeoAR.js demo</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.min.js"></script>
+    <script src="https://unpkg.com/aframe-extras@6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@ar-js-org/ar.js-threejs@0.3.2/dist/ar-threex-location-only.js"></script>
+</head>
+
+<body style='margin: 0; overflow: hidden;'>
+    <a-scene
+        vr-mode-ui="enabled: false"
+		embedded
+        arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
+        
+        <a-entity 
+        gltf-model="assets/magnemite/scene.gltf"
+        position="0 0 0"
+        rotation="0 0 0" 
+        scale="0.10 0.10 0.10" 
+        gps-entity-place="longitude: -41.793521; latitude: -4.289895;" 
+        >
+        </a-entity> <!--Coordenada IFPI: Longitude: -41.793521; latitude: -4.289895; Especificamente: -4.28967( ou 65) 8843565808, -41.79378 (ou termina com 68) 593028441-->
+
+        <a-camera gps-camera rotation-reader></a-camera>
+	</a-scene>
+</body>
+</html>
